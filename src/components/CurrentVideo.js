@@ -44,7 +44,7 @@ const CurrentVideo = ({props}) => {
 
     const relatedVideosList = () =>{
         return relatedVideos.map((video)=>{
-
+            if(video.video_files[0].link !== currentVideo){
             return(
                 <div key={video.id} className="relatedFlex" onClick={()=>selectVideo(video)}>
                     <div className="relatedFlex__img"><img src={video.video_pictures[0].picture} alt="video thumbnail" width="168" /></div>
@@ -55,7 +55,7 @@ const CurrentVideo = ({props}) => {
                     </div>
                 </div>
             )
-
+            }
             })
     }
 
