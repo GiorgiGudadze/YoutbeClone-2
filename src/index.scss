@@ -259,10 +259,18 @@ body{
         padding-bottom: 22px;
         margin-right: 12px;
     }
+    &__imgWrapper{
+        position: relative;
+        width: 100%;
+        padding-top: 56.4%;
+    }
     &__img{
         display: block;
         width: 100%;
         cursor: pointer;
+        position: absolute;
+        top: 0;
+        height: 100%;
     }
     &__box{
         padding: 8px;

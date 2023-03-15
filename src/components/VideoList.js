@@ -44,7 +44,9 @@ const VideoList = ({videos}) => {
         <div className="content">
             {videos.map(video=>
                 <div className="content__box" key={video.id} onClick={()=>{selectVideo(video)}}>
-                    <img className="content__img" src={`${video.video_pictures[0].picture}`} alt="img"/>
+                    <div className='content__imgWrapper'>
+                        <img className="content__img" src={`${video.video_pictures[0].picture}`} alt="img"/>
+                    </div>
                     <div className="content__flex">
                     <AccountCircleIcon className="content__avatar" />
                     <div className="content__details">
